@@ -24,3 +24,10 @@
 - Login ans see if your data is coming properly in the store.
 - NavBar should update as soon as user Logs in.
 - Refactore our code to add constants file + create a Components folder and put all components in it.
+
+
+# Episode 3
+
+- You should not be able to access any other `routes` without `login`.
+- If `token` is not present then `redirect` user to the `/login` page.
+
