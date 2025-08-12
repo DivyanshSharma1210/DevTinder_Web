@@ -30,4 +30,5 @@
 
 - You should not be able to access any other `routes` without `login`.
 - If `token` is not present then `redirect` user to the `/login` page.
-
+- Build the `Logout` Feature.
+- 

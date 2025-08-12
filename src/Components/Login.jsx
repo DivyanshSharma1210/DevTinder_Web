@@ -8,6 +8,7 @@ import { BASE_URL } from '../utils/constants';
 const Login = () => {
   const [emailID, setEmailId] = useState("akshaysaini@gmail.com");
   const [password, setPassword] = useState("Akshay#saini@1210");
+  const [error,setError]=useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -16,14 +17,14 @@ const Login = () => {
     try {
       const res = await axios.post(`${BASE_URL}/login`, {
         emailID,
-        password
+        password,
       }, { withCredentials: true });
 
       console.log(res.data);
-      dispatch(addUser(res.data));
+      dispatch(addUser(res.data.user));
       return navigate("/");
     } catch (err) {
-      console.error(err);
+      setError(err?.response?.data||"Something Went Wrong");
     }
   };
 
@@ -71,6 +72,7 @@ const Login = () => {
 
             {/* Submit Button */}
             <div className="card-actions justify-center mt-6">
+              <p className="text-red-500">{error}</p>
               <button type="submit" className="btn btn-primary w-full text-lg tracking-wide hover:scale-105 transition-transform">
                 Login
               </button>
