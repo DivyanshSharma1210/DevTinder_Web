@@ -32,4 +32,8 @@
 - If `token` is not present then `redirect` user to the `/login` page.
 - Build the `Logout` Feature.
 - Get the `feed` and add the feed in the store.
-- 
+- Build the `Edit Profile` feature.
+- Build a new page to see all my `connections`.
+- Build a  new page to see all my `Connection Requests`.
+- Feature -> `Accept` or `reject` connection Requests.
+

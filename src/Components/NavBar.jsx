@@ -74,9 +74,14 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <a className="block px-4 py-3 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-200">
-                  Settings
-                </a>
+                <Link to="/connections"className="block px-4 py-3 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-200">
+                  Connections
+                </Link>
+              </li>
+              <li>
+                <Link to="/requests"className="block px-4 py-3 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-200">
+                      Requests 
+                </Link>
               </li>
               <div className="border-t border-gray-200 my-2"></div>
               <li>
